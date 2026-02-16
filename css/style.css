@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "SN Pro", sans-serif;
+    font-optical-sizing: auto;
+    background-color: #0E0E0E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-container {
+    position: relative;
+    width: fit-content;
+    color: #fff;
+    height: 300px;
+    width: 300px;
+    background-color: #1a1a1a;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.title-container::before,
+.title-container::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: conic-gradient(from var(--angle), #fff, transparent 80%);
+    z-index: -1;
+    border-radius: 16px;
+    padding: 4px;
+    translate: -50% -50%;
+    animation: 2.5s spin linear infinite;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+.title-container::before {
+    filter: blur(1.5rem);
+    opacity: 0.7;
+}
+
+p {
+    color: #fff;
+}
