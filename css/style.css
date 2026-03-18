@@ -1,79 +1,60 @@
+:root {
+    --secondary-color: #49b9a6;
+    --text-primary-color: #ccd6f6;
+    --text-secondary-color: #8892b0;
+    --background-color: #0b192f;
+}
+
+.secondary-color {
+    color: var(--secondary-color);
+}
+
+.text-secondary {
+    color: var(--text-secondary-color);
+}
+
 body {
-    background-color: #0E0E0E;
+    background-color: var(--background-color);
     min-height: 100vh;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    color: var(--text-primary-color);
+    font-family: "Roboto", sans-serif;
 }
 
-#start-screen {
-    position: fixed;
+header {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav {
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(10px);
     display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 30;
-    cursor: pointer;
+    flex-direction: column;
+    width: 10%;
+    min-height: 100vh;
 }
 
-#start-text {
-    color: #fff;
-}
-
-.hidden {
-    display: none !important;
-}
-
-.main-container {
-    width: 50%;
-    height: 400px;
-    background-color: #1a1a1a;
-    border-radius: 20px;
-    z-index: -2;
-}
-
-.profile-picture {
-    height: 150px;
-    width: 150px;
-    padding: 10px;
-    position: relative;
+.socials {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
+main h1 {
+    margin: 0;
 }
 
-.profile-picture::before {
-    content: '';
-    height: 150px;
-    width: 150px;
-    padding: 3px;
-    background: radial-gradient(circle at 10px 10px,
-            #fff 15%,
-            transparent 20%);
-    animation: 2.5s spin linear infinite;
-    position: absolute;
-    border-radius: 100%;
-    z-index: -1;
+.links a {
+    color: var(--text-primary-color);
+    text-decoration: none;
 }
 
-.profile-picture img {
-    height: 100%;
-    width: 100%;
-    border-radius: 100%;
+.links a:hover {
+    text-decoration: underline;
 }
