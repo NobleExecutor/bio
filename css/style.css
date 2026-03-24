@@ -15,15 +15,17 @@
 
 body {
     background-color: var(--background-color);
-    min-height: 100vh;
+    max-height: 100vh;
     margin: 0;
     color: var(--text-primary-color);
     font-family: "Roboto", sans-serif;
     display: grid;
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: 100px 1fr;
     grid-template-areas: 
     "header header"
     "nav main";
+    position: relative;
+    overflow: hidden;
 }
 
 header {
@@ -39,9 +41,9 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 10%;
+    align-items: center;
+    width: 100%;
     min-height: 100vh;
-    padding: 16px;
 }
 
 main {
@@ -58,8 +60,21 @@ main {
     width: 50px;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 main h1 {
     margin: 0;
+}
+
+.links {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
 }
 
 .links a {
@@ -69,4 +84,8 @@ main h1 {
 
 .links a:hover {
     text-decoration: underline;
+}
+.text-container {
+    margin-top: -6%;
+    font-size: 1.8rem;
 }
