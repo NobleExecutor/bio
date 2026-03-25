@@ -89,14 +89,17 @@ main h1 {
     left: 0;
     bottom: -4px;
     height: 2px;
-    width: 0;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
     border-radius: 20px;
     background-color: var(--secondary-color);
-    transition: width 0.3s ease;
+    transition: transform 0.3s ease-out;
 }
 
 .links-item:hover::after {
-    width: 100%;
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .text-container {
