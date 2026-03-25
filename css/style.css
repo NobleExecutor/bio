@@ -21,9 +21,9 @@ body {
     font-family: "Roboto", sans-serif;
     display: grid;
     grid-template-columns: 100px 1fr;
-    grid-template-areas: 
-    "header header"
-    "nav main";
+    grid-template-areas:
+        "header header"
+        "nav main";
     position: relative;
     overflow: hidden;
 }
@@ -53,7 +53,7 @@ main {
 .socials {
     display: flex;
     flex-direction: column;
-    gap: 128px; 
+    gap: 128px;
 }
 
 .socials-item img {
@@ -90,6 +90,7 @@ main h1 {
     bottom: -4px;
     height: 2px;
     width: 0;
+    border-radius: 20px;
     background-color: var(--secondary-color);
     transition: width 0.3s ease;
 }
@@ -105,4 +106,20 @@ main h1 {
 
 #typewriter {
     min-height: 1.5em;
+}
+
+.btn-container button {
+    background-color: var(--text-secondary-color);
+    color: #fff;
+    border: none;
+    padding: 16px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.btn-container button:hover {
+    background-color: var(--text-primary-color);
+    color: #000;
 }
