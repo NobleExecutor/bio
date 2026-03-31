@@ -1,7 +1,6 @@
 :root {
     --secondary-color: #49b9a6;
     --text-primary-color: #ccd6f6;
-    --text-secondary-color: #8892b0;
     --background-color: #0b192f;
 }
 
@@ -9,17 +8,14 @@
     color: var(--secondary-color);
 }
 
-.text-secondary {
-    color: var(--text-secondary-color);
-}
-
 body {
-    background-color: var(--background-color);
+    background-image: url("/assets/ffflux.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
     max-height: 100vh;
     margin: 0;
     color: var(--text-primary-color);
     font-family: "Roboto", sans-serif;
-    overflow: hidden;
 }
 
 header {
@@ -29,13 +25,8 @@ header {
     width: 100%;
 }
 
-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
+main {
+    margin: 20%;
 }
 
 .socials {
@@ -46,13 +37,6 @@ nav {
 
 .socials-item img {
     width: 50px;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 main h1 {
