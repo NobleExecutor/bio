@@ -30,10 +30,4 @@ setInterval(() => {
     textCursorVisible = !textCursorVisible;
     textElement.textContent = textContent + (textCursorVisible ? '|' : ' ');
 }, 500);
-
-let nextBtn = document.getElementById("next");
-
-nextBtn.addEventListener("click", function() {
-    window.location.href = "/about";
-});
 })
