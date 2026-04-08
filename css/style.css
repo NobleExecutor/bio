@@ -104,6 +104,7 @@ main h1 {
 
 .about-text {
     width: 50%;
+    text-align: center;
 }
 
 #education {
