@@ -2,6 +2,9 @@
     --secondary-color: #49b9a6;
     --text-primary-color: #fff;
     --background-color: #0b192f;
+    --education-text-color: #0E0E0E;
+    --education-title-color: #8200DA;
+    --education-span-color: #990FFA;
 }
 
 .secondary-color {
@@ -12,6 +15,8 @@ body {
     background-image: url("/assets/ffflux.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     max-height: 100vh;
     margin: 0;
     color: var(--text-primary-color);
@@ -82,22 +87,6 @@ main h1 {
     min-height: 1.5em;
 }
 
-.btn-container button {
-    background-color: var(--text-secondary-color);
-    color: #fff;
-    border: none;
-    padding: 16px;
-    font-size: 1.5rem;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .3s ease;
-}
-
-.btn-container button:hover {
-    background-color: var(--text-primary-color);
-    color: #000;
-}
-
 .divider {
     height: 200px;
 }
@@ -111,4 +100,38 @@ main h1 {
 
 .about-text {
     width: 50%;
+}
+
+#education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.education-container {
+    background-color: #fff;
+    color: var(--education-text-color);
+    width: 60%;
+    border-radius: 20px;
+    padding: 32px 42px;
+}
+
+.education-container h2 {
+    color: var(--education-title-color);
+    text-align: center;
+}
+
+.education-item span {
+    color: var(--education-span-color);
+}
+
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.education-item {
+    border-left: 4px solid var(--education-span-color);
+    padding-left: 18px;
 }
