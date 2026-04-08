@@ -19,15 +19,30 @@ html {
 }
 
 body {
-    background-image: url("/assets/ffflux.svg");
+    background-image: url("/assets/ooorganize.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    max-height: 100vh;
+    background-color: #202020;
+    position: relative;
     margin: 0;
     color: var(--text-primary-color);
     font-family: "Roboto", sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+    z-index: 0;
+}
+
+body > *:not(#backtotop) {
+    position: relative;
+    z-index: 1;
 }
 
 header {
@@ -152,8 +167,11 @@ main h1 {
     opacity: 0;
     pointer-events: none;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    top: auto;
+    left: auto;
+    right: max(20px, env(safe-area-inset-right));
+    bottom: max(20px, env(safe-area-inset-bottom));
+    z-index: 1000;
     width: 60px;
     height: 60px;
     display: flex;
@@ -174,18 +192,23 @@ main h1 {
     0% {
         transform: translateY(0);
     }
+
     15% {
         transform: translateY(-6px);
     }
+
     30% {
         transform: translateY(0);
     }
+
     45% {
         transform: translateY(-4px);
     }
+
     60% {
         transform: translateY(0);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -229,7 +252,8 @@ main h1 {
     gap: 16px;
 }
 
-.info-container span, .info-container a {
+.info-container span,
+.info-container a {
     color: var(--education-text-color);
 }
 
