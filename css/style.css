@@ -11,6 +11,10 @@
     color: var(--secondary-color);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: url("/assets/ffflux.svg");
     background-repeat: no-repeat;
