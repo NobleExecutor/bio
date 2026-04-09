@@ -62,7 +62,7 @@ gsap.from(".contact-container", {
 if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
     const cursorDot = document.querySelector(".cursor-dot");
     const cursorRing = document.querySelector(".cursor-ring");
-    const interactiveElements = document.querySelectorAll("a, button, .project-media, .projects-card");
+    const interactiveElements = document.querySelectorAll("a, button, .project-media");
 
     gsap.set([cursorDot, cursorRing], { xPercent: -50, yPercent: -50 });
 
