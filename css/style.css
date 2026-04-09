@@ -391,3 +391,50 @@ footer span a {
     cursor: pointer;
     width: 107%;
 }
+
+.project-media {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.project-img {
+    display: block;
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% + 24px), -50%);
+    display: flex;
+    gap: 16px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.35s ease;
+}
+
+.project-overlay a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(6px);
+}
+
+.project-media:hover .project-img {
+    transform: scale(1.05);
+    filter: brightness(0.7);
+}
+
+.project-media:hover .project-overlay {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%);
+}
