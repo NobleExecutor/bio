@@ -58,3 +58,83 @@ gsap.from(".contact-container", {
     },
     ease: "power2.out"
 });
+
+if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    const cursorDot = document.querySelector(".cursor-dot");
+    const cursorRing = document.querySelector(".cursor-ring");
+    const interactiveElements = document.querySelectorAll("a, button, .project-media, .projects-card");
+
+    gsap.set([cursorDot, cursorRing], { xPercent: -50, yPercent: -50 });
+
+    window.addEventListener("mousemove", (e) => {
+        gsap.to(cursorDot, {
+            x: e.clientX,
+            y: e.clientY,
+            duration: 0.12,
+            opacity: 1,
+            ease: "power2.out",
+            overwrite: "auto"
+        });
+
+        gsap.to(cursorRing, {
+            x: e.clientX,
+            y: e.clientY,
+            duration: 0.8,
+            opacity: 1,
+            ease: "power3.out",
+            overwrite: "auto"
+        });
+    });
+
+    document.addEventListener("mouseleave", () => {
+        gsap.to([cursorDot, cursorRing], {
+            opacity: 0,
+            duration: 0.2,
+            overwrite: "auto"
+        });
+    });
+
+    document.addEventListener("mouseenter", () => {
+        gsap.to([cursorDot, cursorRing], {
+            opacity: 1,
+            duration: 0.2,
+            overwrite: "auto"
+        });
+    });
+
+    interactiveElements.forEach((element) => {
+        element.addEventListener("mouseenter", () => {
+            document.body.classList.add("cursor-hover");
+
+            gsap.to(cursorDot, {
+                scale: 0.6,
+                duration: 0.2,
+                overwrite: "auto"
+            });
+
+            gsap.to(cursorRing, {
+                scale: 1.7,
+                duration: 0.25,
+                ease: "power2.out",
+                overwrite: "auto"
+            });
+        });
+
+        element.addEventListener("mouseleave", () => {
+            document.body.classList.remove("cursor-hover");
+
+            gsap.to(cursorDot, {
+                scale: 1,
+                duration: 0.2,
+                overwrite: "auto"
+            });
+
+            gsap.to(cursorRing, {
+                scale: 1,
+                duration: 0.25,
+                ease: "power2.out",
+                overwrite: "auto"
+            });
+        });
+    });
+}

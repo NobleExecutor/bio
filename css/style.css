@@ -19,9 +19,46 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+@media (hover: hover) and (pointer: fine) {
+    body,
+    a,
+    button,
+    input,
+    textarea {
+        cursor: none;
+    }
+}
+
 img {
     max-width: 100%;
     height: auto;
+}
+
+.cursor-dot,
+.cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 10002;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.cursor-ring {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(3px);
 }
 
 .section-title {
@@ -500,6 +537,12 @@ footer span a {
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, -50%);
+}
+
+.cursor-hover .cursor-ring {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(0);
 }
 
 @media (max-width: 1024px) {
