@@ -1,12 +1,11 @@
 :root {
     --secondary-color: #49b9a6;
     --text-primary-color: #fff;
-    --background-color: #0b192f;
     --education-text-color: #F0F0F0;
     --education-title-color: #00D3F3;
     --education-span-color: #00D3F3;
     --contact-text-color: #364153;
-    --container-bg: #343A48;
+    --card-bg: #343A48;
     --footer-bg: #292F3E;
 }
 
@@ -125,7 +124,7 @@ main h1 {
 }
 
 .education-container {
-    background-color: var(--container-bg);
+    background-color: var(--card-bg);
     color: var(--education-text-color);
     width: 60%;
     border-radius: 20px;
@@ -158,8 +157,8 @@ main h1 {
     position: fixed;
     top: auto;
     left: auto;
-    right: max(20px, env(safe-area-inset-right));
-    bottom: max(20px, env(safe-area-inset-bottom));
+    right: 20px;
+    bottom: 20px;
     z-index: 1000;
     width: 60px;
     height: 60px;
@@ -167,7 +166,7 @@ main h1 {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     backdrop-filter: blur(5px);
     transition: opacity 0.3s ease;
@@ -210,7 +209,7 @@ main h1 {
 }
 
 .contact-container {
-    background-color: var(--container-bg);
+    background-color: var(--card-bg);
     color: var(--education-text-color);
     width: 50%;
     border-radius: 20px;
