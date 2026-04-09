@@ -54,8 +54,7 @@ gsap.from(".contact-container", {
     duration: .4,
     scrollTrigger: {
         trigger: "#contact",
-        start: "center 70%",
-        markers: true
+        start: "center 70%"
     },
     ease: "power2.out"
 });
