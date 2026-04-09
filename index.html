@@ -82,36 +82,38 @@
                 <div class="form-container">
                     <form action="https://formsubmit.co/noblexecutor@duck.com" method="POST" class="contact-form">
                         <label for="name">Nom
-                            <input type="text" name="name" placeholder="Votre nom" required>
+                            <input id="name" type="text" name="name" placeholder="Votre beau petit nom?" required>
                         </label>
                         <label for="mail">Mail
-                            <input type="email" name="mail" placeholder="Votre mail" required>
+                            <input id="mail" type="email" name="mail" placeholder="Pour pouvoir vous répondre :)" required>
                         </label>
-                        <label for="message">
-                            <textarea name="message" placeholder="Votre message..." required></textarea>
+                        <label for="message">Message
+                            <textarea id="message" type="text" name="message" placeholder="Votre message..." required></textarea>
                         </label>
-                        <button type="submit">Envoyer</button>
+                        <button id="submitBtn" type="submit">Envoyer</button>
                     </form>
                 </div>
                 <div class="info-container">
-                    <div class="info-item">
-                        <h4>Email</h4>
-                        <div class="mail-container">
-                            <a href="mailto:noblexecutor.xyz">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                                <span>noblexecutor@duck.com</span>
-                            </a>
+                    <div class="info-wrapper">
+                        <div class="info-item">
+                            <h4>Email</h4>
+                            <div class="mail-container">
+                                <a href="mailto:noblexecutor.xyz">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                    <span>noblexecutor@duck.com</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="info-item">
-                        <h4>Localisation</h4>
-                        <a href="https://maps.app.goo.gl/YcXgwgtxZ6E5M4yq6"><span>Mulhouse, France</span></a>
-                    </div>
-                    <div class="info-item">
-                        <h4>Réseaux sociaux</h4>
-                        <div class="socials-list">
-                            <a href="https://www.linkedin.com/in/florent-skamba/" target="_blank" class="socials-item"><img src="assets/img/linkedin.png" alt="linkedin logo" width="30"></a>
-                            <a href="https://github.com/NobleExecutor" target="_blank" class="socials-item"><img src="assets/img/github.png" alt="github logo" width="30"></a>
+                        <div class="info-item">
+                            <h4>Localisation</h4>
+                            <a href="https://maps.app.goo.gl/YcXgwgtxZ6E5M4yq6"><span>Mulhouse, France</span></a>
+                        </div>
+                        <div class="info-item">
+                            <h4>Réseaux sociaux</h4>
+                            <div class="socials-list">
+                                <a href="https://www.linkedin.com/in/florent-skamba/" target="_blank" class="socials-item"><img src="assets/img/linkedin.png" alt="linkedin logo" width="30"></a>
+                                <a href="https://github.com/NobleExecutor" target="_blank" class="socials-item"><img src="assets/img/github.png" alt="github logo" width="30"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
