@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 window.lenis = new Lenis({
     smoothWheel: true,
-    lerp: 0.08
+    lerp: 0.1
 });
 
 window.lenis.on("scroll", ScrollTrigger.update);
