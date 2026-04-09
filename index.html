@@ -8,7 +8,8 @@
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <title>Portfolio</title>
 </head>
@@ -16,7 +17,6 @@
 <body>
     <div id="tsparticles"></div>
     <header>
-        <img src="https://placehold.co/50" alt="">
         <nav class="links">
             <a href="#about" class="links-item"><span class="secondary-color">00.</span> A propos</a>
             <a href="#education" class="links-item"><span class="secondary-color">01.</span> Parcours</a>
@@ -31,12 +31,13 @@
             <h2>Je m'appelle <span class="secondary-color">Florent</span>,</h2>
             <p>Futur développeur web, actuellement étudiant en BUT <strong>M</strong>étiers du
                 <strong>M</strong>ultimédia
-                et de l'<strong>I</strong>nternet. (MMI)</p>
+                et de l'<strong>I</strong>nternet. (MMI)
+            </p>
         </div>
     </main>
 
     <section id="about">
-        <h2>A propos de moi</h2>
+        <h2 class="section-title">A propos de moi</h2>
         <p class="about-text">Je suis un étudiant en BUT MMI, j'ai 21 ans et je suis passionné de développement web.
             J'aime créer des sites web à partir de zéro, en en apprenant chaque jour un peu plus sur ce domaine, que ce
             soit par de nouvelles technologies ou bien de nouveaux projets. J'ai pour ambition de devenir développeur
@@ -49,7 +50,7 @@
 
     <section id="education">
         <div class="education-container shadow">
-            <h2>Parcours scolaire</h2>
+            <h2 class="section-title">Parcours scolaire</h2>
             <div class="education-list">
                 <div class="education-item">
                     <h4>BUT MMI</h4>
@@ -75,9 +76,62 @@
 
     <div class="divider"></div>
 
+    <section id="projects">
+        <div class="projects-container">
+            <h2 class="section-title">Mes projets</h2>
+            <div class="projects-grid">
+                <div class="projects-card shadow">
+                    <h3>Quick Notes App</h3>
+                    <img src="assets/img/notes.png" alt="Image d'illustration de mon application de prise de note rapide" width="500">
+                    <p>Une simple application de prise de note rapide, avec stockage persistant dans le naviguateur.</p>
+                    <div class="badges-container">
+                        <div class="tech-badge html">HTML5</div>
+                        <div class="tech-badge css">CSS3</div>
+                        <div class="tech-badge js">Javascript</div>
+                    </div>
+                </div>
+                <div class="projects-card shadow">
+                    <h3>Site Web ADF</h3>
+                    <img src="assets/img/adf.png" alt="Image d'illustration du site ADF" width="500">
+                    <p>Un site web réalisé pour un projet de classe, dans lequel nous devions créer une campagne de
+                        communication a 360° pour une association de défense des femmes.</p>
+                    <div class="badges-container">
+                        <div class="tech-badge wp">Wordpress</div>
+                        <div class="tech-badge js">Javascript</div>
+                        <div class="tech-badge hb">Hébergement</div>
+                    </div>
+                </div>
+                <div class="projects-card shadow">
+                    <h3>Film Search App</h3>
+                    <img src="assets/img/movies.png" alt="Image d'illustration de mon application de recherche de film" width="500">
+                    <p>Une simple application web pour rechercher des films. Débuts avec React, familiarisation avec JSX
+                        et les hooks.</p>
+                    <div class="badges-container">
+                        <div class="tech-badge react">React</div>
+                        <div class="tech-badge ts">Typescript</div>
+                        <div class="tech-badge api">API</div>
+                    </div>
+                </div>
+                <div class="projects-card shadow">
+                    <h3>Portfolio</h3>
+                    <img src="assets/img/portfolio.png" alt="Image d'illustration de mon portfolio" width="500">
+                    <p>Premier portfolio en ligne, utilisation de plusieurs librairies javascript et mise en ligne
+                        automatique grâce aux Actions Github.</p>
+                    <div class="badges-container">
+                        <div class="tech-badge html">HTML5</div>
+                        <div class="tech-badge js">Javascript</div>
+                        <div class="tech-badge gsap">GSAP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
     <section id="contact">
         <div class="contact-container shadow">
-            <h2>Me contacter</h2>
+            <h2 class="section-title">Me contacter</h2>
             <div class="contact-wrapper">
                 <div class="form-container">
                     <form action="https://formsubmit.co/noblexecutor@duck.com" method="POST" class="contact-form">
@@ -85,10 +139,12 @@
                             <input id="name" type="text" name="name" placeholder="Votre beau petit nom?" required>
                         </label>
                         <label for="mail">Mail
-                            <input id="mail" type="email" name="mail" placeholder="Pour pouvoir vous répondre :)" required>
+                            <input id="mail" type="email" name="mail" placeholder="Pour pouvoir vous répondre :)"
+                                required>
                         </label>
                         <label for="message">Message
-                            <textarea id="message" type="text" name="message" placeholder="Votre message..." required></textarea>
+                            <textarea id="message" type="text" name="message" placeholder="Votre message..."
+                                required></textarea>
                         </label>
                         <button id="submitBtn" type="submit">Envoyer</button>
                     </form>
@@ -99,7 +155,14 @@
                             <h4>Email</h4>
                             <div class="mail-container">
                                 <a href="mailto:noblexecutor.xyz">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
                                     <span>noblexecutor@duck.com</span>
                                 </a>
                             </div>
@@ -111,8 +174,11 @@
                         <div class="info-item">
                             <h4>Réseaux sociaux</h4>
                             <div class="socials-list">
-                                <a href="https://www.linkedin.com/in/florent-skamba/" target="_blank" class="socials-item"><img src="assets/img/linkedin.png" alt="linkedin logo" width="30"></a>
-                                <a href="https://github.com/NobleExecutor" target="_blank" class="socials-item"><img src="assets/img/github.png" alt="github logo" width="30"></a>
+                                <a href="https://www.linkedin.com/in/florent-skamba/" target="_blank"
+                                    class="socials-item"><img src="assets/img/linkedin.png" alt="linkedin logo"
+                                        width="30"></a>
+                                <a href="https://github.com/NobleExecutor" target="_blank" class="socials-item"><img
+                                        src="assets/img/github.png" alt="github logo" width="30"></a>
                             </div>
                         </div>
                     </div>
@@ -124,7 +190,8 @@
     <div class="divider-small"></div>
 
     <footer>
-        <span>© 2026 NobleExecutor. Tout droit réservé. Fait avec ❤️ — Code source disponible <a href="https://github.com/NobleExecutor/bio" target="_blank">ici</a></span>
+        <span>© 2026 NobleExecutor. Tout droit réservé. Fait avec ❤️ — Code source disponible <a
+                href="https://github.com/NobleExecutor/bio" target="_blank">ici</a></span>
     </footer>
 
     <div id="backtotop">
@@ -134,7 +201,8 @@
         </svg>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-links@2.12.0/tsparticles.preset.links.bundle.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/tsparticles-preset-links@2.12.0/tsparticles.preset.links.bundle.min.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/backtotop.js"></script>
     <script src="js/typewriter.js"></script>
