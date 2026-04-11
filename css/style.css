@@ -354,6 +354,7 @@ section {
 .tech-badge {
     padding: 8px 16px;
     border-radius: 50px;
+    font-weight: bold;
 }
 
 .html {
@@ -365,11 +366,11 @@ section {
 }
 
 .js {
-    background-color: #e7cc00;
+    background-color: #b99c33;
 }
 
 .react {
-    background-color: #60DAFB;
+    background-color: #3e8fa5;
 }
 
 .ts {
