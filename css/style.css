@@ -393,6 +393,14 @@ section {
     background-color: #be7fbb;
 }
 
+.php {
+    background-color: #787BB5;
+}
+
+.mysql {
+    background-color: #4479A1;
+}
+
 #contact {
     display: flex;
     justify-content: center;
