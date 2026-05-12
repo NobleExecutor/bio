@@ -63,6 +63,7 @@ if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
     const cursorDot = document.querySelector(".cursor-dot");
     const cursorRing = document.querySelector(".cursor-ring");
     const interactiveElements = document.querySelectorAll("a, button, .project-media");
+    const textElements = document.querySelectorAll("p, span, .tech-badge, h1, h2, h3, h4, input, label");
 
     gsap.set([cursorDot, cursorRing], { xPercent: -50, yPercent: -50 });
 
@@ -137,4 +138,40 @@ if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
             });
         });
     });
+
+    textElements.forEach((element) => {
+        element.addEventListener("mouseenter", () => {
+            document.body.classList.add("cursor-hover");
+
+            gsap.to(cursorDot, {
+                scale: 0.6,
+                duration: 0.2,
+                overwrite: "auto"
+            });
+
+            gsap.to(cursorRing, {
+                scale: 1,
+                duration: 0.25,
+                ease: "power2.out",
+                overwrite: "auto"
+            });
+        });
+
+        element.addEventListener("mouseleave", () => {
+            document.body.classList.remove("cursor-hover");
+
+            gsap.to(cursorDot, {
+                scale: 1,
+                duration: 0.2,
+                overwrite: "auto"
+            });
+
+            gsap.to(cursorRing, {
+                scale: 1,
+                duration: 0.25,
+                ease: "power2.out",
+                overwrite: "auto"
+            });
+        });
+    })
 }

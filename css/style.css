@@ -355,6 +355,11 @@ section {
     padding: 8px 16px;
     border-radius: 50px;
     font-weight: bold;
+    transition: transform .2s ease;
+}
+
+.tech-badge:hover {
+    transform: scale(1.1);
 }
 
 .html {
